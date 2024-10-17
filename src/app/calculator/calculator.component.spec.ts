@@ -1,5 +1,4 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CalculatorComponent } from './calculator.component';
 
@@ -7,13 +6,9 @@ describe('CalculatorComponent', () => {
   let component: CalculatorComponent;
   let fixture: ComponentFixture<CalculatorComponent>;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CalculatorComponent ],
-      imports: [
-        FormsModule,
-        ReactiveFormsModule
-      ]
+      declarations: [ CalculatorComponent ]
     })
     .compileComponents();
   }));
@@ -30,8 +25,8 @@ describe('CalculatorComponent', () => {
 
   it('should calculate sums correctly', () => {
 
-    component.calculatorForm.get('firstInput').setValue(String(10));
-    component.calculatorForm.get('secondInput').setValue(String(2));
+    component.calculatorForm.get('firstInput').setValue(10);
+    component.calculatorForm.get('secondInput').setValue(2);
     component.calculatorForm.get('operator').setValue('+');
     component.onSubmit();
 
@@ -41,8 +36,8 @@ describe('CalculatorComponent', () => {
 
   it('should calculate subtractions correctly', () => {
 
-    component.calculatorForm.get('firstInput').setValue(String(10));
-    component.calculatorForm.get('secondInput').setValue(String(2));
+    component.calculatorForm.get('firstInput').setValue(10);
+    component.calculatorForm.get('secondInput').setValue(2);
     component.calculatorForm.get('operator').setValue('-');
     component.onSubmit();
 
@@ -52,8 +47,8 @@ describe('CalculatorComponent', () => {
 
   it('should calculate divisions correctly', () => {
 
-    component.calculatorForm.get('firstInput').setValue(String(10));
-    component.calculatorForm.get('secondInput').setValue(String(2));
+    component.calculatorForm.get('firstInput').setValue(10);
+    component.calculatorForm.get('secondInput').setValue(2);
     component.calculatorForm.get('operator').setValue('/');
     component.onSubmit();
 
@@ -63,8 +58,8 @@ describe('CalculatorComponent', () => {
 
   it('should calculate multiplications correctly', () => {
 
-    component.calculatorForm.get('firstInput').setValue(String(10));
-    component.calculatorForm.get('secondInput').setValue(String(2));
+    component.calculatorForm.get('firstInput').setValue(10);
+    component.calculatorForm.get('secondInput').setValue(2);
     component.calculatorForm.get('operator').setValue('*');
     component.onSubmit();
 
@@ -74,8 +69,8 @@ describe('CalculatorComponent', () => {
 
   it('should clear the form', () => {
 
-    component.calculatorForm.get('firstInput').setValue(String(10));
-    component.calculatorForm.get('secondInput').setValue(String(2));
+    component.calculatorForm.get('firstInput').setValue(10);
+    component.calculatorForm.get('secondInput').setValue(2);
     component.calculatorForm.get('operator').setValue('+');
     component.onClear();
 

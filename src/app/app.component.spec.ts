@@ -1,21 +1,15 @@
-import { TestBed, waitForAsync } from '@angular/core/testing';
+import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
-import { CalculatorComponent } from './calculator/calculator.component';
 
 describe('AppComponent', () => {
-  beforeEach(waitForAsync(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule,
-        FormsModule,
-        ReactiveFormsModule
+        RouterTestingModule
       ],
       declarations: [
-        AppComponent,
-        CalculatorComponent
+        AppComponent
       ],
     }).compileComponents();
   }));

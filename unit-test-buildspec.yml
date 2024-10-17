@@ -1,14 +1,10 @@
 version: 0.2
 phases:
-  install: 
+  install:
     runtime-versions:
-      nodejs: 20
+      nodejs: 12
     commands:
-      - npm install -g @angular/cli@17
-      - wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor | tee /etc/apt/keyrings/chrome.gpg
-      - echo "deb [signed-by=/etc/apt/keyrings/chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
-      - apt-get -y update
-      - apt-get -y install google-chrome-stable
+      - npm install -g @angular/cli@9.0.6
   pre_build:
     commands:
       - npm install

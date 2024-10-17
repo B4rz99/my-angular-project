@@ -26,8 +26,8 @@ export class CalculatorComponent implements OnInit {
   onSubmit() {
 
     // Read values of the form controls from the form group
-    const firstInput = +this.calculatorForm.get('firstInput').value;
-    const secondInput = +this.calculatorForm.get('secondInput').value;
+    const firstInput = this.calculatorForm.get('firstInput').value;
+    const secondInput = this.calculatorForm.get('secondInput').value;
     const operator = this.calculatorForm.get('operator').value;
 
     // Calculate according to the operator
